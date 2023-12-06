@@ -1,0 +1,110 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+img{
+    width: 100%;
+}
+
+h1{
+    font-size: 3rem;
+    font-family: "Helvetica", sans-serif;
+}
+/* css du slider */
+.slider{
+    width: 500px;
+    height: 300px;
+    position: relative;
+}
+
+.slides{
+    height: 100%;
+    position: relative;
+}
+
+.slide{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.slide.active{
+    transition: all 0.3s;
+}
+
+.slide img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide:not(.active) img{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slider-Btns{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider-Btns .btn{
+    width: 25px;
+    height: 25px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: rgb(159, 208, 236);
+    border: none;
+    border-radius: 50%;
+}
+
+.slider-Btns .btn:hover{
+    background-color: rgb(86, 146, 180);
+}
+
+.slider-Btns .btn:hover i{
+    color: white;
+}
+
+.slider-btn-view{
+    width: 100%;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    gap: 10px;
+}
+
+.slider-btn-view button{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.slider-btn-view button.active, .slider-btn-view button:hover{
+    background-color: blueviolet;
+}
